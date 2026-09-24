@@ -15,7 +15,7 @@
 | 프로그램명 | 사용 목적 | 설치 방식 |
 |---|---|---|
 | Bandizip | 압축·해제 (악성 샘플 zip 처리 포함) | winget |
-| Python 3.13 | 분석 스크립트 실행, pip 도구 구동 | winget |
+| Python 3.13.14 | 분석 스크립트 실행, pip 도구 구동 | winget |
 | Visual Studio Code | 코드 편집기 | winget |
 | Git | 소스 다운로드·버전 관리 | winget |
 | Temurin JDK 21 | Ghidra 실행용 Java | winget |
@@ -60,10 +60,7 @@
 | 프로그램명 | 사용 목적 | 설치 방식 |
 |---|---|---|
 | Nmap | 포트·서비스 스캔 | winget |
-| Nessus | 취약점 스캐너 (Essentials는 16 IP 제한) | winget |
 | Burp Suite Community | 웹 프록시·웹 취약점 진단 | winget |
-| OWASP ZAP | 웹 애플리케이션 자동 스캐너 | winget |
-| sqlmap | SQL Injection 점검 | pip |
 | Trivy | 컨테이너·IaC·패키지 취약점 스캔 | GitHub 릴리스 → `C:\Tools\trivy` |
  
 ## 5. 버그바운티 (정찰·자산 탐색)
@@ -77,27 +74,6 @@
 | ffuf | 디렉터리·파라미터 퍼징 | go install |
 | Amass | 공격 표면·자산 매핑 | go install |
 | requests | HTTP 스크립트 작성용 라이브러리 | pip |
- 
-## 6. 자동 설치 제외 (수동 설치 필요)
- 
-| 프로그램명 | 사용 목적 | 제외 사유 / 다운로드 |
-|---|---|---|
-| IDA Free | 디스어셈블러·정적 분석 | 무인 설치 불확실 · https://hex-rays.com/ida-free |
-| Metasploit Framework | 취약점 검증·익스플로잇 | Defender 충돌, 수동 설치 권장 · https://docs.metasploit.com/docs/using-metasploit/getting-started/nightly-installers.html |
-| Caido | 웹 프록시 (Burp 대안) | 무인 설치 불확실 · https://caido.io/download |
-| Naabu | 고속 포트 스캔 | Npcap 필요 · https://github.com/projectdiscovery/naabu/releases |
-| FLARE-VM | 리버싱 도구 일괄 설치 | 별도 Windows VM 권장 · https://github.com/mandiant/flare-vm |
- 
-## 7. Linux 전용이라 제외한 도구
- 
-| 프로그램명 | 비고 |
-|---|---|
-| Kali Linux, REMnux | Linux 배포판 |
-| pwndbg | Linux ELF 디버깅용 GDB 확장 |
-| CAPEv2 | Linux 호스트 기반 샌드박스 |
-| OpenVAS (Greenbone) | Linux 기반 스캐너 |
-| Nikto, Lynis | Linux 환경 전용 |
-| Semgrep | Windows 네이티브 지원이 불안정 |
  
 ---
  
