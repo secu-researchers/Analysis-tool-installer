@@ -20,6 +20,7 @@
 | Git | 소스 다운로드·버전 관리 | winget |
 | Temurin JDK 21 | Ghidra 실행용 Java | winget |
 | Go | ProjectDiscovery 등 Go 도구 빌드·설치 | winget |
+| Artcraft | 오픈소스 Word, 엑셀, PDF 뷰어 등 런처 | powershell |
  
 ## 2. 리버스 엔지니어링
  
