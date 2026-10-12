@@ -65,6 +65,8 @@ call :ghdl skylot/jadx              "jadx-gui-.*-with-jre-win\.zip$"     jadx
 call :ghdl VirusTotal/yara          "win64\.zip$"                        yara
 call :ghdl aquasecurity/trivy       "windows-64bit\.zip$"                trivy
 
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$ErrorActionPreference='Stop'; $ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $r=Invoke-RestMethod 'https://api.github.com/repos/storytold/artcraft/releases/latest' -Headers @{'User-Agent'='installer'}; $a=$r.assets | Where-Object { $_.name -match 'x64-setup\.exe$' } | Select-Object -First 1; $f=Join-Path $env:TEMP $a.name; Invoke-WebRequest $a.browser_download_url -OutFile $f -UseBasicParsing; Start-Process $f -ArgumentList '/S' -Wait; Remove-Item $f -Force" >> "%LOG%" 2>&1 && echo     [OK] ArtCraft || (echo     [FAIL] ArtCraft & set "FAILED=!FAILED! ArtCraft")
+
 echo.
 echo ############ [3/5] Direct zip downloads (Sysinternals, Didier Stevens, PeStudio) ############
 call :zipdl "https://download.sysinternals.com/files/SysinternalsSuite.zip"       Sysinternals
